@@ -19,7 +19,7 @@ public strictfp class GaussLegendre {
 	/**
 	 * Constant required for initial state of algorithm.
 	 */
-	public static final double ONE_OVER_ROOT_2 = 1.0 / Math.sqrt(2.0);
+	public static final double ONE_OVER_ROOT_2 = 1.0d / Math.sqrt(2.0d);
 
 	/**
 	 * Run the GaussLegendre Algorithm for <code>n</code> iterations.
@@ -33,8 +33,8 @@ public strictfp class GaussLegendre {
 		}
 		double a_n = 1.0d;
 		double b_n = ONE_OVER_ROOT_2;
-		double t_n = 0.25;
-		double p_n = 1.0;
+		double t_n = 0.25d;
+		double p_n = 1.0d;
 		// Perform n iterations of the algorithm
 		for (int i = 0; i < n; ++i) {
 			// Calculate values for next iteration
