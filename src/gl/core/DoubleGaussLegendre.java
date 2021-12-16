@@ -15,7 +15,7 @@ package gl.core;
  * @author djp
  *
  */
-public strictfp class GaussLegendre {
+public strictfp class DoubleGaussLegendre {
 	/**
 	 * Constant required for initial state of algorithm.
 	 */

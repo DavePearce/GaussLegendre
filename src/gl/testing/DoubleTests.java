@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.fail;
 
 import org.junit.Test;
 
-import gl.core.GaussLegendre;
+import gl.core.DoubleGaussLegendre;
 
 /**
  * A collection of unit tests for the GaussLegendre Algorithm.
@@ -16,17 +16,17 @@ import gl.core.GaussLegendre;
 public class DoubleTests {
 	@Test
 	public void test_valid_01() {
-		double pi = GaussLegendre.run(1);
+		double pi = DoubleGaussLegendre.run(1);
 		assertEquals(3.14_05792505221686, pi);
 	}
 	@Test
 	public void test_valid_02() {
-		double pi = GaussLegendre.run(2);
+		double pi = DoubleGaussLegendre.run(2);
 		assertEquals(3.1415926_46213543, pi);
 	}
 	@Test
 	public void test_valid_03() {
-		double pi = GaussLegendre.run(3);
+		double pi = DoubleGaussLegendre.run(3);
 		assertEquals(3.14159265358979_4, pi);
 	}
 
@@ -36,7 +36,7 @@ public class DoubleTests {
 	@Test
 	public void test_invalid_01() {
 		try {
-			GaussLegendre.run(0);
+			DoubleGaussLegendre.run(0);
 			fail("Should not be able to run algorithm with less than one iteration");
 		} catch (IllegalArgumentException e) {
 
@@ -45,7 +45,7 @@ public class DoubleTests {
 	@Test
 	public void test_invalid_02() {
 		try {
-			GaussLegendre.run(-1);
+			DoubleGaussLegendre.run(-1);
 			fail("Should not be able to run algorithm with less than one iteration");
 		} catch (IllegalArgumentException e) {
 
